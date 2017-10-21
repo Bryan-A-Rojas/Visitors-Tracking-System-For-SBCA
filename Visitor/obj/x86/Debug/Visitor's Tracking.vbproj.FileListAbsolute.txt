@@ -1,0 +1,22 @@
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\bin\x86\Debug\Visitor.exe.config
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor.exe
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor.xml
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor.pdb
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor.Resources.resources
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor.Register.resources
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor's Tracking.vbproj.GenerateResource.Cache
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\bin\x86\Debug\Visitor.exe
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\bin\x86\Debug\Visitor.pdb
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\bin\x86\Debug\Visitor.xml
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor.Test.resources
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor.MessageBoxCustom.resources
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor.SubList.resources
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor.Approve.resources
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor.ApproveDialog.resources
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor.Reports.resources
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor.MasterList.resources
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor.SplashScreen.resources
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor.MainMenu.resources
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor.Login.resources
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitor's Tracking System (Visual Basic)\Visitor\obj\x86\Debug\Visitor.MasterListDialog.resources
