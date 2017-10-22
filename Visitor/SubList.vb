@@ -96,6 +96,8 @@ Public Class SubList
                 itm = New ListViewItem(arr)
                 ListView1.Items.Add(itm)
             Loop
+        Else
+            MsgBoxSetMsg("No visitors present")
         End If
         con.Close()
         ChangeHighlight()
@@ -190,7 +192,7 @@ Public Class SubList
         If ListView1.SelectedItems.Count > 0 Then
             Try
                 Dim query As String = " UPDATE Details SET [TimeOut]= '" & Format(Now, "HH:mm:ss") & "' WHERE VisitID =@ID"
-                modifyrecord(query, " Goodbye!")
+                modifyrecord(query, " Come Again!")
             Catch
                 MsgBox("Error, please contact the administrator")
             End Try

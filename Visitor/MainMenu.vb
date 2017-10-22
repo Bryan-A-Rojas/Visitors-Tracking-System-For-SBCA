@@ -1,6 +1,8 @@
 ﻿Public Class MainMenu
+
     'On Load
     Private Sub MainMenu_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Login.erasetext()
         Clock.Start()
     End Sub
 
@@ -31,6 +33,7 @@
     End Sub
 
 
+    'Button Section
 
     'Registration Button Design
     Private Sub btnRegistration_DesignOnHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRegister.MouseHover
@@ -71,7 +74,6 @@
         Me.Close()
     End Sub
 
-
     'Current Button Design
     Private Sub btnCurrent_DesignOnHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCurrent.MouseHover
         With btnCurrent
@@ -90,7 +92,6 @@
         SubList.Show()
         Me.Close()
     End Sub
-
 
     'Master List Button Design
     Private Sub btnMasterList_DesignOnHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMasterList.MouseHover
@@ -111,7 +112,6 @@
         Me.Close()
     End Sub
 
-
     'Reports Button Design
     Private Sub btnReports_DesignOnHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReports.MouseHover
         With btnReports
@@ -131,8 +131,22 @@
         Me.Close()
     End Sub
 
+    'Signout Button Design
+    Private Sub btnSignout_DesignOnHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSignout.MouseHover
+        With btnSignout
+            .BackColor = Color.Transparent
+            .Image = My.Resources.SignoutHighlight
+        End With
+    End Sub
+    Private Sub btnSignout_DesignOnLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSignout.MouseLeave
+        With btnSignout
+            .BackColor = Color.Transparent
+            .Image = My.Resources.Signout
+        End With
+    End Sub
     'Sign Out Button
-    Private Sub btnSignOut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSignOut.Click
+    Private Sub btnSignOut_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSignout.Click
+        Login.erasetext()
         Login.Show()
         Me.Close()
     End Sub

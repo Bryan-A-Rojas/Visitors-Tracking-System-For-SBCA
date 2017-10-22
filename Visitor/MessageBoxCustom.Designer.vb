@@ -25,6 +25,7 @@ Partial Class MessageBoxCustom
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.lblmsg = New System.Windows.Forms.Label
         Me.btnOK = New System.Windows.Forms.Button
+        Me.btnYes = New System.Windows.Forms.Button
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -61,6 +62,19 @@ Partial Class MessageBoxCustom
         Me.btnOK.Text = "OK"
         Me.btnOK.UseVisualStyleBackColor = True
         '
+        'btnYes
+        '
+        Me.btnYes.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnYes.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnYes.ForeColor = System.Drawing.Color.White
+        Me.btnYes.Location = New System.Drawing.Point(411, 125)
+        Me.btnYes.Name = "btnYes"
+        Me.btnYes.Size = New System.Drawing.Size(37, 23)
+        Me.btnYes.TabIndex = 4
+        Me.btnYes.Text = "Yes"
+        Me.btnYes.UseVisualStyleBackColor = True
+        Me.btnYes.Visible = False
+        '
         'MessageBoxCustom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -68,6 +82,7 @@ Partial Class MessageBoxCustom
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(159, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(500, 160)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnYes)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.lblmsg)
         Me.Controls.Add(Me.PictureBox1)
@@ -77,6 +92,7 @@ Partial Class MessageBoxCustom
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Error"
+        Me.TopMost = True
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -85,4 +101,5 @@ Partial Class MessageBoxCustom
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents lblmsg As System.Windows.Forms.Label
     Friend WithEvents btnOK As System.Windows.Forms.Button
+    Friend WithEvents btnYes As System.Windows.Forms.Button
 End Class

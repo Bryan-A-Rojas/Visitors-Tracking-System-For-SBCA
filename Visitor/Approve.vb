@@ -15,6 +15,10 @@ Public Class Approve
     Private Sub Approve_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Sets Default Image Icon
         PictureBoxVisitorPic.Image = DefaultImage
+
+        'Set Max length of textboxes
+        txtSearch.MaxLength = 99
+
         Clock.Start()
     End Sub
     'Clock Timer
@@ -166,7 +170,7 @@ Public Class Approve
             Try
                 If Not txtSearch.Text = "" Then
                     Dim Query As String = "SELECT [VisitorID],[FirstName],[MiddleName],[LastName],[Sex],[Picture] FROM Visitor"
-                    Dim Condition As String = " WHERE FirstName + ' ' + LastName LIKE  '%' + @value0 + '%'"
+                    Dim Condition As String = " WHERE FirstName + ' ' + LastName LIKE  '%' + @value0 + '%' AND Status = 'Active'"
                     List(Query & Condition)
                 Else
                     MsgBoxSetMsg("Search field is empty")
@@ -205,7 +209,7 @@ Public Class Approve
         Try
             If Not txtSearch.Text = "" Then
                 Dim Query As String = "SELECT [VisitorID],[FirstName],[MiddleName],[LastName],[Sex],[Picture] FROM Visitor"
-                Dim Condition As String = " WHERE FirstName + ' ' + LastName LIKE  '%' + @value0 + '%' AND Status IS NOT NULL"
+                Dim Condition As String = " WHERE FirstName + ' ' + LastName LIKE  '%' + @value0 + '%' AND Status = 'Active'"
                 List(Query & Condition)
             Else
                 MsgBoxSetMsg("Search field is empty")
@@ -214,4 +218,6 @@ Public Class Approve
             MsgBox("Error detected, please contact the administrator")
         End Try
     End Sub
+
+
 End Class

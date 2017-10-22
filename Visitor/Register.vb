@@ -29,7 +29,13 @@ Public Class Register
         'Sets Default Image Icon
         PictureBoxVisitorPic.Image = DefaultImage
 
-        txtMiddleInitial.MaxLength = 3
+        'Set Limit of TextBoxes
+        txtFirstName.MaxLength = 49
+        txtMiddleInitial.MaxLength = 4
+        txtLastName.MaxLength = 49
+
+        txtPhoneNum.MaxLength = 24
+        txtAddress.MaxLength = 254
 
         'Start Clock
         Clock.Start()
@@ -174,7 +180,7 @@ Public Class Register
         con.Open()
 
         For i As Integer = 0 To ObjArray.Count - 1
-            cmd.Parameters.AddWithValue("@value" & i, ObjArray(i).Text)
+            cmd.Parameters.AddWithValue("@value" & i, System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(ObjArray(i).Text))
         Next
 
         Dim ms As MemoryStream = New MemoryStream
@@ -185,7 +191,13 @@ Public Class Register
         cmd.ExecuteNonQuery()
         MsgBoxSetMsg(msg)
         con.Close()
-        cmd.Parameters.Clear()
+
+        Dim query As SqlCommand = New SqlCommand
+        con.Open()
+
+        query = New SqlCommand("SELECT IDENT_CURRENT('Visitor')", con)
+        ApproveDialog.txtVisitorID.Text = query.ExecuteScalar().ToString()
+        con.Close()
 
         ' "Refreshes" the screen
         erasetext()
@@ -228,20 +240,35 @@ Public Class Register
     End Sub
     'Register Button Function
     Private Sub btnRegister_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRegister.Click
-        Try
-            StripSpaces()
-            Dim Check As Boolean = CheckIfEmpty()
+        ' Try
+        StripSpaces()
+        Dim Check As Boolean = CheckIfEmpty()
 
-            Dim InputArray() As Object = {txtFirstName, txtLastName, txtMiddleInitial, BirthdatePicker, txtPhoneNum, ComboSex, txtAddress}
+        Dim InputArray() As Object = {txtFirstName, txtLastName, txtMiddleInitial, BirthdatePicker, txtPhoneNum, ComboSex, txtAddress}
 
-            If Check = False Then
-                'Split SQL Query for readability
-                Dim query As String = "INSERT INTO Visitor([Picture],[FirstName],[LastName],[MiddleName],[Birthdate],[PhoneNumber],[Sex],[Address]) "
-                Dim values As String = "VALUES(@Picture,@value0,@value1,@value2,@value3,@value4,@value5,@value6);"
-                modifyrecord(query & values, " Visitor record saved", InputArray)
+        If Check = False Then
+            'Split SQL Query for readability
+            Dim query As String = "INSERT INTO Visitor([Picture],[FirstName],[LastName],[MiddleName],[Birthdate],[PhoneNumber],[Sex],[Address]) "
+            Dim values As String = "VALUES(@Picture,@value0,@value1,@value2,@value3,@value4,@value5,@value6);"
+            modifyrecord(query & values, " Visitor record saved", InputArray)
+
+            MessageBoxCustom.btnYes.Visible = True
+            MessageBoxCustom.btnOK.Text = "No"
+
+            MsgBoxSetMsg("Would you like to time-in?")
+
+            MessageBoxCustom.btnYes.Visible = False
+            MessageBoxCustom.btnOK.Text = "OK"
+
+            If (MessageBoxCustom.yes = True) Then
+                MessageBoxCustom.yes = False
+                ApproveDialog.ShowDialog()
+                Approve.Close()
+                Me.Show()
             End If
-        Catch
-            MsgBox("Error detected, Please call administrator", MsgBoxStyle.Critical)
-        End Try
+        End If
+        ' Catch
+        ' MsgBox("Error detected, Please call administrator", MsgBoxStyle.Critical)
+        ' End Try
     End Sub
 End Class

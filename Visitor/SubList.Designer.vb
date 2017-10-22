@@ -132,11 +132,11 @@ Partial Class SubList
         '
         Me.btnTimeOut.BackColor = System.Drawing.Color.Green
         Me.btnTimeOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTimeOut.Font = New System.Drawing.Font("Raleway", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTimeOut.Font = New System.Drawing.Font("Raleway", 22.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTimeOut.ForeColor = System.Drawing.Color.White
-        Me.btnTimeOut.Location = New System.Drawing.Point(1058, 269)
+        Me.btnTimeOut.Location = New System.Drawing.Point(1004, 255)
         Me.btnTimeOut.Name = "btnTimeOut"
-        Me.btnTimeOut.Size = New System.Drawing.Size(110, 56)
+        Me.btnTimeOut.Size = New System.Drawing.Size(164, 94)
         Me.btnTimeOut.TabIndex = 11
         Me.btnTimeOut.Text = "Time-Out"
         Me.btnTimeOut.UseVisualStyleBackColor = False
@@ -191,7 +191,7 @@ Partial Class SubList
         Me.txtDescription.Location = New System.Drawing.Point(457, 356)
         Me.txtDescription.Name = "txtDescription"
         Me.txtDescription.ReadOnly = True
-        Me.txtDescription.Size = New System.Drawing.Size(598, 31)
+        Me.txtDescription.Size = New System.Drawing.Size(711, 31)
         Me.txtDescription.TabIndex = 28
         '
         'Label8

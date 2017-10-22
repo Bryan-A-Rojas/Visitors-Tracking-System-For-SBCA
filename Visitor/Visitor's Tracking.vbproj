@@ -18,6 +18,7 @@
     <OptionStrict>Off</OptionStrict>
     <OptionInfer>On</OptionInfer>
     <TargetFrameworkSubset>Client</TargetFrameworkSubset>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -151,12 +152,6 @@
     <Compile Include="SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Test.Designer.vb">
-      <DependentUpon>Test.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Test.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="SubList.Designer.vb">
       <DependentUpon>SubList.vb</DependentUpon>
     </Compile>
@@ -182,6 +177,18 @@
       <DependentUpon>Register.vb</DependentUpon>
     </Compile>
     <Compile Include="Register.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisitHistoryDialog.Designer.vb">
+      <DependentUpon>VisitHistoryDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VisitHistoryDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisitHistoryWhole.Designer.vb">
+      <DependentUpon>VisitHistoryWhole.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VisitHistoryWhole.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -213,9 +220,6 @@
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Test.resx">
-      <DependentUpon>Test.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SubList.resx">
       <DependentUpon>SubList.vb</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +231,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisitHistoryDialog.resx">
+      <DependentUpon>VisitHistoryDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisitHistoryWhole.resx">
+      <DependentUpon>VisitHistoryWhole.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -321,6 +331,41 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Signout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignoutHighlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

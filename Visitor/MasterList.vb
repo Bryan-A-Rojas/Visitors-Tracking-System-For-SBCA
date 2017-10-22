@@ -12,7 +12,7 @@ Public Class MasterList
     Dim DefaultImage As Image = My.Resources.No_Image_Icon
 
     'Variable for ID
-    Dim VisitorID As String
+    Public VisitorID As String
 
     'On Load
     Private Sub MasterList_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -216,9 +216,25 @@ Public Class MasterList
         End If
     End Sub
 
-    Private Sub btnUpdate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUpdate.Click
-        ' If 
-        MasterListDialog.ShowDialog()
 
+
+    Private Sub btnUpdate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUpdate.Click
+        If ListView1.SelectedItems.Count > 0 Then
+            MasterListDialog.ShowDialog()
+        Else
+            MsgBoxSetMsg("Please select a visitor")
+        End If
+    End Sub
+
+    Private Sub btnVisitHistory_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAllVisitHistory.Click
+        VisitHistoryWhole.Show()
+    End Sub
+
+    Private Sub btnViewVisitHistory_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnViewVisitHistory.Click
+        If ListView1.SelectedItems.Count > 0 Then
+            VisitHistoryDialog.ShowDialog()
+        Else
+            MsgBoxSetMsg("Please select a visitor")
+        End If
     End Sub
 End Class

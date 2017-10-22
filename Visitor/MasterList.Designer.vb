@@ -44,10 +44,12 @@ Partial Class MasterList
         Me.Label6 = New System.Windows.Forms.Label
         Me.txtSearch = New System.Windows.Forms.TextBox
         Me.btnShowAll = New System.Windows.Forms.Button
+        Me.btnAllVisitHistory = New System.Windows.Forms.Button
         Me.btnSearch = New System.Windows.Forms.PictureBox
         Me.PictureBox2 = New System.Windows.Forms.PictureBox
         Me.btnBack = New System.Windows.Forms.PictureBox
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
+        Me.btnViewVisitHistory = New System.Windows.Forms.Button
         CType(Me.btnSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -152,7 +154,7 @@ Partial Class MasterList
         Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUpdate.Font = New System.Drawing.Font("Raleway", 24.0!)
         Me.btnUpdate.ForeColor = System.Drawing.Color.Black
-        Me.btnUpdate.Location = New System.Drawing.Point(860, 587)
+        Me.btnUpdate.Location = New System.Drawing.Point(904, 587)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(142, 87)
         Me.btnUpdate.TabIndex = 79
@@ -218,6 +220,19 @@ Partial Class MasterList
         Me.btnShowAll.Text = "Show all"
         Me.btnShowAll.UseVisualStyleBackColor = False
         '
+        'btnAllVisitHistory
+        '
+        Me.btnAllVisitHistory.BackColor = System.Drawing.Color.Cyan
+        Me.btnAllVisitHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAllVisitHistory.Font = New System.Drawing.Font("Raleway", 24.0!)
+        Me.btnAllVisitHistory.ForeColor = System.Drawing.Color.Black
+        Me.btnAllVisitHistory.Location = New System.Drawing.Point(214, 149)
+        Me.btnAllVisitHistory.Name = "btnAllVisitHistory"
+        Me.btnAllVisitHistory.Size = New System.Drawing.Size(344, 49)
+        Me.btnAllVisitHistory.TabIndex = 106
+        Me.btnAllVisitHistory.Text = "View all visit history"
+        Me.btnAllVisitHistory.UseVisualStyleBackColor = False
+        '
         'btnSearch
         '
         Me.btnSearch.BackColor = System.Drawing.Color.White
@@ -263,12 +278,27 @@ Partial Class MasterList
         Me.PictureBox1.TabIndex = 90
         Me.PictureBox1.TabStop = False
         '
+        'btnViewVisitHistory
+        '
+        Me.btnViewVisitHistory.BackColor = System.Drawing.Color.Cyan
+        Me.btnViewVisitHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnViewVisitHistory.Font = New System.Drawing.Font("Raleway", 22.0!)
+        Me.btnViewVisitHistory.ForeColor = System.Drawing.Color.Black
+        Me.btnViewVisitHistory.Location = New System.Drawing.Point(730, 587)
+        Me.btnViewVisitHistory.Name = "btnViewVisitHistory"
+        Me.btnViewVisitHistory.Size = New System.Drawing.Size(168, 87)
+        Me.btnViewVisitHistory.TabIndex = 107
+        Me.btnViewVisitHistory.Text = "View visit history"
+        Me.btnViewVisitHistory.UseVisualStyleBackColor = False
+        '
         'MasterList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(159, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.btnViewVisitHistory)
+        Me.Controls.Add(Me.btnAllVisitHistory)
         Me.Controls.Add(Me.btnShowAll)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.Label6)
@@ -319,4 +349,6 @@ Partial Class MasterList
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents txtSearch As System.Windows.Forms.TextBox
     Friend WithEvents btnShowAll As System.Windows.Forms.Button
+    Friend WithEvents btnAllVisitHistory As System.Windows.Forms.Button
+    Friend WithEvents btnViewVisitHistory As System.Windows.Forms.Button
 End Class

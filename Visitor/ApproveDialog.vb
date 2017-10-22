@@ -17,6 +17,8 @@ Public Class ApproveDialog
         txtDestination.Text = "St. Maur"
         txtPurpose.Text = "Escort"
 
+        txtDescription.MaxLength = 249
+
         List("SELECT [FirstName],[MiddleName],[LastName],[Sex],[PhoneNumber],[Address],[Birthdate],[Status] FROM Visitor WHERE [VisitorID] = @value0")
         ChangeStatusColor()
     End Sub
@@ -65,7 +67,21 @@ Public Class ApproveDialog
         txtBirthDate.Text = Format(rdr("Birthdate"), "MMMM dd,yyyy")
         txtStatus.Text = rdr("Status")
 
-        Me.PictureBoxVisitorPic.Image = Approve.PictureBoxVisitorPic.Image
+        con.Close()
+
+        con.Open()
+        cmd = New SqlCommand("SELECT Picture FROM Visitor WHERE VisitorID=@value0", con)
+        cmd.Parameters.AddWithValue("@value0", txtVisitorID.Text)
+        rdr = cmd.ExecuteReader
+
+        If rdr.HasRows Then
+            Do While rdr.Read()
+                Dim PicArray() As Byte = CType(rdr("Picture"), Byte())
+                Dim ms As MemoryStream = New MemoryStream(PicArray)
+                ms.Seek(0, SeekOrigin.Begin)
+                PictureBoxVisitorPic.Image = Image.FromStream(ms)
+            Loop
+        End If
         con.Close()
     End Sub
     'Changes the value of Purpose ID
@@ -86,12 +102,6 @@ Public Class ApproveDialog
             PurposeID = 7
         End If
     End Function
-
-
-
-
-    'ADD MORE!!!!!!!!!
-
     'Changes the value of Description ID
     Function DestinationID(ByVal DestinationName As String) As Int16
         If String.Compare(DestinationName, "St. Maur") = 0 Then
@@ -144,7 +154,6 @@ Public Class ApproveDialog
             Dim query As String = "INSERT INTO Details([VisitorID],[TimeIn],[DateOfVisit],[PurposeID],[DestinationID],[Description]) "
             Dim values As String = "VALUES(@value0,@value1,@value2,@value3,@value4,@value5)"
             modifyrecord(query & values, " Welcome!")
-            Approve.Show()
             Me.Close()
         Else
             MsgBoxSetMsg("Please fill up all fields")
@@ -153,7 +162,6 @@ Public Class ApproveDialog
     'Reject
     Private Sub btnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
         erasetext()
-        Approve.Show()
         Me.Close()
     End Sub
 End Class

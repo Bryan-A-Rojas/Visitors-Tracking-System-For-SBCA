@@ -40,7 +40,8 @@ Partial Class MainMenu
         Me.btnRegister = New System.Windows.Forms.PictureBox
         Me.PictureBox2 = New System.Windows.Forms.PictureBox
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
-        Me.btnSignOut = New System.Windows.Forms.Button
+        Me.btnSignout = New System.Windows.Forms.PictureBox
+        Me.Label8 = New System.Windows.Forms.Label
         CType(Me.btnReports, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMasterList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCurrent, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -48,6 +49,7 @@ Partial Class MainMenu
         CType(Me.btnRegister, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnSignout, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -80,7 +82,7 @@ Partial Class MainMenu
         Me.txtDate.AutoSize = True
         Me.txtDate.Font = New System.Drawing.Font("Raleway", 15.0!)
         Me.txtDate.ForeColor = System.Drawing.Color.White
-        Me.txtDate.Location = New System.Drawing.Point(35, 561)
+        Me.txtDate.Location = New System.Drawing.Point(35, 615)
         Me.txtDate.Name = "txtDate"
         Me.txtDate.Size = New System.Drawing.Size(114, 24)
         Me.txtDate.TabIndex = 46
@@ -91,7 +93,7 @@ Partial Class MainMenu
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Raleway", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(81, 250)
+        Me.Label3.Location = New System.Drawing.Point(83, 261)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(82, 22)
         Me.Label3.TabIndex = 48
@@ -102,7 +104,7 @@ Partial Class MainMenu
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Raleway", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(227, 250)
+        Me.Label4.Location = New System.Drawing.Point(234, 261)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(90, 22)
         Me.Label4.TabIndex = 51
@@ -113,7 +115,7 @@ Partial Class MainMenu
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Raleway", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(53, 377)
+        Me.Label5.Location = New System.Drawing.Point(55, 388)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(143, 22)
         Me.Label5.TabIndex = 53
@@ -124,7 +126,7 @@ Partial Class MainMenu
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Raleway", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(217, 377)
+        Me.Label6.Location = New System.Drawing.Point(224, 388)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(105, 22)
         Me.Label6.TabIndex = 55
@@ -135,7 +137,7 @@ Partial Class MainMenu
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Raleway", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(157, 511)
+        Me.Label7.Location = New System.Drawing.Point(164, 522)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(78, 22)
         Me.Label7.TabIndex = 57
@@ -146,7 +148,7 @@ Partial Class MainMenu
         Me.btnReports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnReports.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnReports.Image = Global.Visitor.My.Resources.Resources.Reports
-        Me.btnReports.Location = New System.Drawing.Point(146, 415)
+        Me.btnReports.Location = New System.Drawing.Point(153, 426)
         Me.btnReports.Name = "btnReports"
         Me.btnReports.Size = New System.Drawing.Size(100, 89)
         Me.btnReports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -158,7 +160,7 @@ Partial Class MainMenu
         Me.btnMasterList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnMasterList.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnMasterList.Image = Global.Visitor.My.Resources.Resources.MasterList
-        Me.btnMasterList.Location = New System.Drawing.Point(220, 281)
+        Me.btnMasterList.Location = New System.Drawing.Point(227, 292)
         Me.btnMasterList.Name = "btnMasterList"
         Me.btnMasterList.Size = New System.Drawing.Size(100, 89)
         Me.btnMasterList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -170,7 +172,7 @@ Partial Class MainMenu
         Me.btnCurrent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnCurrent.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCurrent.Image = Global.Visitor.My.Resources.Resources.Current
-        Me.btnCurrent.Location = New System.Drawing.Point(73, 281)
+        Me.btnCurrent.Location = New System.Drawing.Point(75, 292)
         Me.btnCurrent.Name = "btnCurrent"
         Me.btnCurrent.Size = New System.Drawing.Size(100, 89)
         Me.btnCurrent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -182,7 +184,7 @@ Partial Class MainMenu
         Me.btnApproval.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnApproval.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnApproval.Image = Global.Visitor.My.Resources.Resources.Approval
-        Me.btnApproval.Location = New System.Drawing.Point(220, 158)
+        Me.btnApproval.Location = New System.Drawing.Point(227, 169)
         Me.btnApproval.Name = "btnApproval"
         Me.btnApproval.Size = New System.Drawing.Size(100, 89)
         Me.btnApproval.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -193,7 +195,7 @@ Partial Class MainMenu
         '
         Me.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnRegister.Image = Global.Visitor.My.Resources.Resources.Register
-        Me.btnRegister.Location = New System.Drawing.Point(73, 158)
+        Me.btnRegister.Location = New System.Drawing.Point(75, 169)
         Me.btnRegister.Name = "btnRegister"
         Me.btnRegister.Size = New System.Drawing.Size(100, 89)
         Me.btnRegister.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -204,7 +206,7 @@ Partial Class MainMenu
         '
         Me.PictureBox2.BackgroundImage = Global.Visitor.My.Resources.Resources.circular_clock
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(9, 561)
+        Me.PictureBox2.Location = New System.Drawing.Point(9, 615)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(22, 23)
         Me.PictureBox2.TabIndex = 47
@@ -220,23 +222,37 @@ Partial Class MainMenu
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
-        'btnSignOut
+        'btnSignout
         '
-        Me.btnSignOut.Font = New System.Drawing.Font("Raleway", 13.0!)
-        Me.btnSignOut.Location = New System.Drawing.Point(288, 104)
-        Me.btnSignOut.Name = "btnSignOut"
-        Me.btnSignOut.Size = New System.Drawing.Size(100, 30)
-        Me.btnSignOut.TabIndex = 58
-        Me.btnSignOut.Text = "Sign-Out"
-        Me.btnSignOut.UseVisualStyleBackColor = True
+        Me.btnSignout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnSignout.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSignout.Image = Global.Visitor.My.Resources.Resources.Signout
+        Me.btnSignout.Location = New System.Drawing.Point(307, 525)
+        Me.btnSignout.Name = "btnSignout"
+        Me.btnSignout.Size = New System.Drawing.Size(64, 54)
+        Me.btnSignout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnSignout.TabIndex = 59
+        Me.btnSignout.TabStop = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Raleway", 11.0!)
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(306, 582)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(69, 18)
+        Me.Label8.TabIndex = 60
+        Me.Label8.Text = "Sign-Out"
         '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(159, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(400, 600)
-        Me.Controls.Add(Me.btnSignOut)
+        Me.ClientSize = New System.Drawing.Size(400, 650)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.btnSignout)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.btnReports)
         Me.Controls.Add(Me.Label6)
@@ -263,6 +279,7 @@ Partial Class MainMenu
         CType(Me.btnRegister, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnSignout, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -283,5 +300,6 @@ Partial Class MainMenu
     Friend WithEvents btnMasterList As System.Windows.Forms.PictureBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents btnReports As System.Windows.Forms.PictureBox
-    Friend WithEvents btnSignOut As System.Windows.Forms.Button
+    Friend WithEvents btnSignout As System.Windows.Forms.PictureBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class

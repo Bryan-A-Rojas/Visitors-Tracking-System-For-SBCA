@@ -28,7 +28,13 @@ Public Class MasterListDialog
         'Sets Default Image Icon
         PictureBoxVisitorPic.Image = DefaultImage
 
-        txtMiddleInitial.MaxLength = 3
+        'Set Limit of TextBoxes
+        txtFirstName.MaxLength = 49
+        txtMiddleInitial.MaxLength = 4
+        txtLastName.MaxLength = 49
+
+        txtPhoneNum.MaxLength = 24
+        txtAddress.MaxLength = 254
 
         List("SELECT [FirstName],[MiddleName],[LastName],[Sex],[PhoneNumber],[Address],[Birthdate],[Picture] FROM Visitor WHERE [VisitorID] = " & VisitorID & "")
 
