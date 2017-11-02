@@ -58,7 +58,7 @@ Public Class MasterList
         ListView1.Items.Clear()
         If rdr.HasRows Then
             Do While rdr.Read()
-                Dim arr As String() = New String(8) {}
+                Dim arr As String() = New String(7) {}
                 Dim itm As ListViewItem
                 arr(0) = rdr("VisitorID")
                 arr(1) = rdr("FirstName")
@@ -67,8 +67,7 @@ Public Class MasterList
                 arr(4) = rdr("Birthdate")
                 arr(5) = rdr("PhoneNumber")
                 arr(6) = rdr("Sex")
-                arr(7) = rdr("Address")
-                arr(8) = rdr("Status")
+                arr(7) = rdr("Status")
                 itm = New ListViewItem(arr)
                 ListView1.Items.Add(itm)
             Loop

@@ -53,7 +53,7 @@ Public Class Login
         txtPassword.Text = Nothing
         txtUsername.Text = Nothing
     End Sub
-    'Encryption
+    'Encryption3
     Public Shared Function VerifyHash(ByVal plainText As String, _
                                          ByVal hashAlgorithm As String, _
                                          ByVal hashValue As String) _
@@ -272,6 +272,46 @@ Public Class Login
             End If
         Else
             MsgBoxSetMsg("Please fill up all fields")
+        End If
+    End Sub
+    Private Sub txtLogin_EnterKey(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtUsername.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            StripSpaces()
+            If Not txtUsername.Text = "" And Not txtPassword.Text = "" Then
+                List()
+                If VerifyHash(txtPassword.Text, "SHA512", sqlResult.ToString).ToString() Then
+                    MsgBoxSetMsg("Welcome")
+                    MainMenu.Show()
+                    Me.Close()
+                Else
+                    MsgBoxSetMsg("Wrong Username or password!")
+                    txtUsername.Text = Nothing
+                    txtPassword.Text = Nothing
+                    sqlResult = Nothing
+                End If
+            Else
+                MsgBoxSetMsg("Please fill up all fields")
+            End If
+        End If
+    End Sub
+    Private Sub txtPassword_EnterKey(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtPassword.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            StripSpaces()
+            If Not txtUsername.Text = "" And Not txtPassword.Text = "" Then
+                List()
+                If VerifyHash(txtPassword.Text, "SHA512", sqlResult.ToString).ToString() Then
+                    MsgBoxSetMsg("Welcome")
+                    MainMenu.Show()
+                    Me.Close()
+                Else
+                    MsgBoxSetMsg("Wrong Username or password!")
+                    txtUsername.Text = Nothing
+                    txtPassword.Text = Nothing
+                    sqlResult = Nothing
+                End If
+            Else
+                MsgBoxSetMsg("Please fill up all fields")
+            End If
         End If
     End Sub
     'Exit Button

@@ -3,11 +3,6 @@ Imports System.IO
 
 
 Public Class Register
-
-    'Camera Variables
-    Public Touchless As New TouchlessLib.TouchlessMgr
-    Public Camera1 As TouchlessLib.Camera = Touchless.Cameras.Item(0)
-
     'SQL Variables
     Dim con As SqlConnection = New SqlConnection("server=DESKTOP-LJA6FPI\SQLEXPRESS;Initial Catalog=Visitor's Tracking System;Integrated Security=True")
     Dim cmd As SqlCommand
@@ -35,7 +30,6 @@ Public Class Register
         txtLastName.MaxLength = 49
 
         txtPhoneNum.MaxLength = 24
-        txtAddress.MaxLength = 254
 
         'Start Clock
         Clock.Start()
@@ -69,35 +63,11 @@ Public Class Register
     End Sub
 
 
-    'Utility Section
-
-    'Clears Text
-    Sub erasetext()
-        Dim a As Control
-        For Each a In Me.Controls
-            If TypeOf a Is TextBox Then
-                a.Text = Nothing
-            End If
-        Next
-        'Sets Default Picture
-        PictureBoxVisitorPic.Image = DefaultImage
-    End Sub
-    'Removes Extra White Spaces
-    Private Sub StripSpaces()
-        Dim a As Control
-        For Each a In Me.Controls
-            If TypeOf a Is TextBox Then
-                a.Text = String.Join(" ", a.Text.Split(New Char() {}, StringSplitOptions.RemoveEmptyEntries))
-            End If
-        Next
-    End Sub
-
-
     'Validation Section
 
     'Only Letters
     Private Sub ValidationLetter_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) _
-                              Handles txtFirstName.KeyPress, txtMiddleInitial.KeyPress, txtLastName.KeyPress
+                              Handles txtFirstName.KeyPress, txtMiddleInitial.KeyPress
         If Not (Asc(e.KeyChar) = 8) Then
             Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyz "
             If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
@@ -119,7 +89,7 @@ Public Class Register
     End Sub
     'Only Letters and Numbers
     Private Sub ValidationLetterAndNumbers_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) _
-                              Handles txtAddress.KeyPress
+                                Handles txtLastName.KeyPress
         If Not (Asc(e.KeyChar) = 8) Or Asc(e.KeyChar) <> 8 Then
             Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyz1234567890 "
             If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then
@@ -129,23 +99,6 @@ Public Class Register
             End If
         End If
     End Sub
-    'Prevents Empty Fields
-    Private Function CheckIfEmpty() As Boolean
-        'Checks if All textboxes are empty
-        Dim empty = Me.Controls.OfType(Of TextBox)().Where(Function(txt) txt.Text.Trim.Length = 0)
-        If empty.Any Then
-            MsgBoxSetMsg(" Please fill up all fields")
-            CheckIfEmpty = True
-
-            'Checks if PictureBox is Empty or Default
-        ElseIf PictureBoxVisitorPic.Image Is DefaultImage Then
-            MsgBoxSetMsg(" Please take a picture")
-            CheckIfEmpty = True
-        Else
-            CheckIfEmpty = False
-        End If
-    End Function
-
 
     'Picture Methods
     Private Sub btnstartpic_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnstartpic.Click
@@ -170,7 +123,6 @@ Public Class Register
 
     End Sub
 
-
     'SQL Method
     Sub modifyrecord(ByVal sql As String, ByVal msg As String, ByVal ObjArray() As Object)
         Dim cmd As SqlCommand = New SqlCommand
@@ -179,28 +131,33 @@ Public Class Register
         cmd.Connection = con
         con.Open()
 
+        'Loops through the array of textboxes and other objects
         For i As Integer = 0 To ObjArray.Count - 1
+            'System.Globalization.... turns the first letter of each word as uppercase (useful for names)
             cmd.Parameters.AddWithValue("@value" & i, System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(ObjArray(i).Text))
         Next
 
+        'Turns the picture into binary
         Dim ms As MemoryStream = New MemoryStream
         PictureBoxVisitorPic.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
         Dim PicArray() As Byte = ms.ToArray
         cmd.Parameters.AddWithValue("@Picture", PicArray.ToArray)
-
         cmd.ExecuteNonQuery()
-        MsgBoxSetMsg(msg)
         con.Close()
 
         Dim query As SqlCommand = New SqlCommand
         con.Open()
 
+        'Gets ID of last inserted row
         query = New SqlCommand("SELECT IDENT_CURRENT('Visitor')", con)
         ApproveDialog.txtVisitorID.Text = query.ExecuteScalar().ToString()
         con.Close()
 
-        ' "Refreshes" the screen
-        erasetext()
+        ' "Resets" the screen
+        EraseText(Me)
+        SetDefaultPicture(PictureBoxVisitorPic, DefaultImage)
+
+        MsgBoxSetMsg(msg)
     End Sub
 
 
@@ -240,35 +197,41 @@ Public Class Register
     End Sub
     'Register Button Function
     Private Sub btnRegister_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRegister.Click
-        ' Try
-        StripSpaces()
-        Dim Check As Boolean = CheckIfEmpty()
+        Try
+            StripSpaces(Me)
+            'Validations
+            Dim Exceptions As TextBox() = {txtMiddleInitial, txtPhoneNum}
 
-        Dim InputArray() As Object = {txtFirstName, txtLastName, txtMiddleInitial, BirthdatePicker, txtPhoneNum, ComboSex, txtAddress}
+            Dim Check As Boolean = CheckIfEmpty(Me, Exceptions)
+            Dim CheckPic As Boolean = CheckIfDefaultPicture(PictureBoxVisitorPic, DefaultImage)
 
-        If Check = False Then
-            'Split SQL Query for readability
-            Dim query As String = "INSERT INTO Visitor([Picture],[FirstName],[LastName],[MiddleName],[Birthdate],[PhoneNumber],[Sex],[Address]) "
-            Dim values As String = "VALUES(@Picture,@value0,@value1,@value2,@value3,@value4,@value5,@value6);"
-            modifyrecord(query & values, " Visitor record saved", InputArray)
+            If Check = False And CheckPic = False Then
+                'Split SQL Query for readability
+                Dim InputArray() As Object = {txtFirstName, txtLastName, txtMiddleInitial, BirthdatePicker, txtPhoneNum, ComboSex}
 
-            MessageBoxCustom.btnYes.Visible = True
-            MessageBoxCustom.btnOK.Text = "No"
+                Dim query As String = "INSERT INTO Visitor([Picture],[FirstName],[LastName],[MiddleName],[Birthdate],[PhoneNumber],[Sex]) "
+                Dim values As String = "VALUES(@Picture,@value0,@value1,@value2,@value3,@value4,@value5);"
+                modifyrecord(query & values, " Visitor record saved", InputArray)
 
-            MsgBoxSetMsg("Would you like to time-in?")
+                MsgBoxSetYesOrNo()
+                MsgBoxSetMsg("Would you like to time-in?")
+                MsgBoxSetDefault()
 
-            MessageBoxCustom.btnYes.Visible = False
-            MessageBoxCustom.btnOK.Text = "OK"
-
-            If (MessageBoxCustom.yes = True) Then
-                MessageBoxCustom.yes = False
-                ApproveDialog.ShowDialog()
-                Approve.Close()
-                Me.Show()
+                If (MessageBoxCustom.yes = True) Then
+                    MessageBoxCustom.yes = False
+                    ApproveDialog.ShowDialog()
+                    Approve.Close()
+                    Me.Show()
+                End If
+            ElseIf Check = True Then
+                MsgBoxSetMsg(" Please fill up all fields")
+            ElseIf CheckPic = True Then
+                MsgBoxSetMsg(" Please take a picture")
             End If
-        End If
-        ' Catch
-        ' MsgBox("Error detected, Please call administrator", MsgBoxStyle.Critical)
-        ' End Try
+
+        Catch
+            MsgBox("Error detected, Please call administrator", MsgBoxStyle.Critical)
+        End Try
     End Sub
+
 End Class

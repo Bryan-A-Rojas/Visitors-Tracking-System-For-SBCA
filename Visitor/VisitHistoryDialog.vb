@@ -13,7 +13,7 @@ Public Class VisitHistoryDialog
     Private Sub VisitHistoryDialog_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         VisitorID = MasterList.VisitorID
         txtVisitorID.Text = VisitorID
-        Open("SELECT [FirstName],[MiddleName],[LastName],[Sex],[PhoneNumber],[Address],[Birthdate],[Status] FROM Visitor WHERE [VisitorID] = @value0")
+        Open("SELECT [FirstName],[MiddleName],[LastName],[Sex],[PhoneNumber],[Birthdate],[Status] FROM Visitor WHERE [VisitorID] = @value0")
         List("SELECT [VisitID],[PurposeName],[DestinationName],[Description],[TimeIn],[TimeOut] FROM Details INNER JOIN Purpose ON dbo.Details.PurposeID = dbo.Purpose.PurposeID INNER JOIN dbo.Destination ON dbo.Details.DestinationID = dbo.Destination.DestinationID WHERE [VisitorID] = @value0")
         ChangeHighlight()
     End Sub
@@ -30,7 +30,6 @@ Public Class VisitHistoryDialog
         txtName.Text = rdr("FirstName") & " " & rdr("MiddleName") & " " & rdr("LastName")
         txtSex.Text = rdr("Sex")
         txtPhoneNum.Text = rdr("PhoneNumber")
-        txtAddress.Text = rdr("Address")
         txtBirthDate.Text = Format(rdr("Birthdate"), "MMMM dd,yyyy")
         txtStatus.Text = rdr("Status")
 

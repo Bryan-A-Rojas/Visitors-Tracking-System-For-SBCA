@@ -34,9 +34,8 @@ Public Class MasterListDialog
         txtLastName.MaxLength = 49
 
         txtPhoneNum.MaxLength = 24
-        txtAddress.MaxLength = 254
 
-        List("SELECT [FirstName],[MiddleName],[LastName],[Sex],[PhoneNumber],[Address],[Birthdate],[Picture] FROM Visitor WHERE [VisitorID] = " & VisitorID & "")
+        List("SELECT [FirstName],[MiddleName],[LastName],[Sex],[PhoneNumber],[Birthdate],[Picture] FROM Visitor WHERE [VisitorID] = " & VisitorID & "")
 
     End Sub
 
@@ -160,7 +159,6 @@ Public Class MasterListDialog
         txtLastName.Text = rdr("LastName")
         ComboSex.Text = rdr("Sex")
         txtPhoneNum.Text = rdr("PhoneNumber")
-        txtAddress.Text = rdr("Address")
         BirthdatePicker.Text = rdr("Birthdate")
 
         con.Close()
@@ -214,11 +212,11 @@ Public Class MasterListDialog
             StripSpaces()
             Dim Check As Boolean = CheckIfEmpty()
 
-            Dim InputArray() As Object = {txtFirstName, txtLastName, txtMiddleInitial, BirthdatePicker, txtPhoneNum, ComboSex, txtAddress}
+            Dim InputArray() As Object = {txtFirstName, txtLastName, txtMiddleInitial, BirthdatePicker, txtPhoneNum, ComboSex}
 
             If Check = False Then
                 'Split SQL Query for readability
-                Dim query As String = "UPDATE Visitor SET [Picture] = @Picture, [FirstName]= @value0,[LastName] = @value1,[MiddleName] = @value2,[Birthdate] = @value3,[PhoneNumber] = @value4,[Sex] = @value5,[Address]  = @value6, [Status] = 'Active' "
+                Dim query As String = "UPDATE Visitor SET [Picture] = @Picture, [FirstName]= @value0,[LastName] = @value1,[MiddleName] = @value2,[Birthdate] = @value3,[PhoneNumber] = @value4,[Sex] = @value5, [Status] = 'Active' "
                 Dim values As String = "WHERE [VisitorID] = " & VisitorID & ";"
                 modifyrecord(query & values, " Visitor Updated", InputArray)
                 MasterList.List("SELECT * FROM MasterList", False)

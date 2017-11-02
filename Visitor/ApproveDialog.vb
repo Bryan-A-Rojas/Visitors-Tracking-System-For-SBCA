@@ -19,7 +19,7 @@ Public Class ApproveDialog
 
         txtDescription.MaxLength = 249
 
-        List("SELECT [FirstName],[MiddleName],[LastName],[Sex],[PhoneNumber],[Address],[Birthdate],[Status] FROM Visitor WHERE [VisitorID] = @value0")
+        List("SELECT [FirstName],[MiddleName],[LastName],[Sex],[PhoneNumber],[Birthdate],[Status] FROM Visitor WHERE [VisitorID] = @value0")
         ChangeStatusColor()
     End Sub
 
@@ -63,7 +63,6 @@ Public Class ApproveDialog
         txtName.Text = rdr("FirstName") & " " & rdr("MiddleName") & " " & rdr("LastName")
         txtSex.Text = rdr("Sex")
         txtPhoneNum.Text = rdr("PhoneNumber")
-        txtAddress.Text = rdr("Address")
         txtBirthDate.Text = Format(rdr("Birthdate"), "MMMM dd,yyyy")
         txtStatus.Text = rdr("Status")
 

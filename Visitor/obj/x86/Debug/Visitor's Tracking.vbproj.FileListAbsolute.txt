@@ -46,3 +46,4 @@ C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitors-Tracking-S
 C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitors-Tracking-System-For-SBCA\Visitor\bin\x86\Debug\Interop.Microsoft.Office.Core.dll
 C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitors-Tracking-System-For-SBCA\Visitor\obj\x86\Debug\Interop.Microsoft.Office.Core.dll
 C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitors-Tracking-System-For-SBCA\Visitor\obj\x86\Debug\Visitor's Tracking.vbproj.ResolveComReference.cache
+C:\Users\bryan2366\Desktop\Code Projects\Github Repositories\Visitors-Tracking-System-For-SBCA\Visitor\obj\x86\Debug\Visitor.test.resources
