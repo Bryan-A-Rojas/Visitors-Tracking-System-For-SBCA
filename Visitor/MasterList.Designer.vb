@@ -22,34 +22,33 @@ Partial Class MasterList
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MasterList))
-        Me.txtDate = New System.Windows.Forms.Label
+        Me.txtDate = New System.Windows.Forms.Label()
         Me.Clock = New System.Windows.Forms.Timer(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label14 = New System.Windows.Forms.Label
-        Me.Number = New System.Windows.Forms.ColumnHeader
-        Me.BirthDate = New System.Windows.Forms.ColumnHeader
-        Me.Sex = New System.Windows.Forms.ColumnHeader
-        Me.Lastname = New System.Windows.Forms.ColumnHeader
-        Me.ID = New System.Windows.Forms.ColumnHeader
-        Me.MI = New System.Windows.Forms.ColumnHeader
-        Me.Address = New System.Windows.Forms.ColumnHeader
-        Me.Firstname = New System.Windows.Forms.ColumnHeader
-        Me.Status = New System.Windows.Forms.ColumnHeader
-        Me.btnUpdate = New System.Windows.Forms.Button
-        Me.ListView1 = New System.Windows.Forms.ListView
-        Me.btnDelete = New System.Windows.Forms.Button
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.txtSearch = New System.Windows.Forms.TextBox
-        Me.btnShowAll = New System.Windows.Forms.Button
-        Me.btnAllVisitHistory = New System.Windows.Forms.Button
-        Me.btnSearch = New System.Windows.Forms.PictureBox
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox
-        Me.btnBack = New System.Windows.Forms.PictureBox
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox
-        Me.btnViewVisitHistory = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Number = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.BirthDate = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Sex = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Lastname = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.MI = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Firstname = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Status = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.btnShowAll = New System.Windows.Forms.Button()
+        Me.btnAllVisitHistory = New System.Windows.Forms.Button()
+        Me.btnSearch = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.btnBack = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnViewVisitHistory = New System.Windows.Forms.Button()
         CType(Me.btnSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,11 +132,6 @@ Partial Class MasterList
         Me.MI.Text = "Middle Initial"
         Me.MI.Width = 102
         '
-        'Address
-        '
-        Me.Address.Text = "Address"
-        Me.Address.Width = 298
-        '
         'Firstname
         '
         Me.Firstname.Text = "First Name"
@@ -163,7 +157,7 @@ Partial Class MasterList
         '
         'ListView1
         '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ID, Me.Firstname, Me.MI, Me.Lastname, Me.BirthDate, Me.Number, Me.Sex, Me.Address, Me.Status})
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ID, Me.Firstname, Me.MI, Me.Lastname, Me.BirthDate, Me.Number, Me.Sex, Me.Status})
         Me.ListView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
@@ -339,7 +333,6 @@ Partial Class MasterList
     Friend WithEvents Lastname As System.Windows.Forms.ColumnHeader
     Friend WithEvents ID As System.Windows.Forms.ColumnHeader
     Friend WithEvents MI As System.Windows.Forms.ColumnHeader
-    Friend WithEvents Address As System.Windows.Forms.ColumnHeader
     Friend WithEvents Firstname As System.Windows.Forms.ColumnHeader
     Friend WithEvents Status As System.Windows.Forms.ColumnHeader
     Friend WithEvents btnUpdate As System.Windows.Forms.Button

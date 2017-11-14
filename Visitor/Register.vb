@@ -1,16 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
 
-
 Public Class Register
-    'SQL Variables
-    Dim con As SqlConnection = New SqlConnection("server=DESKTOP-LJA6FPI\SQLEXPRESS;Initial Catalog=Visitor's Tracking System;Integrated Security=True")
-    Dim cmd As SqlCommand
-    Dim rdr As SqlDataReader
-
-    'Container Variable for picture
-    Dim DefaultImage As Image = My.Resources.No_Image_Icon
-
     'On Load
     Private Sub Register_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Sets the resolution from load
@@ -161,26 +152,7 @@ Public Class Register
     End Sub
 
 
-    'Button Section
 
-    'Back Button Design
-    Private Sub btnBack_DesignOnHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBack.MouseHover
-        With btnBack
-            .BackColor = Color.Transparent
-            .Image = My.Resources.previousHighlight
-        End With
-    End Sub
-    Private Sub btnBack_DesignOnLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBack.MouseLeave
-        With btnBack
-            .BackColor = Color.Transparent
-            .Image = My.Resources.previous
-        End With
-    End Sub
-    'Back Button Function
-    Private Sub btnBack_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBack.Click
-        MainMenu.Show()
-        Me.Close()
-    End Sub
 
     'Register Button Design
     Private Sub btnRegister_DesignOnHover(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRegister.MouseHover
@@ -207,10 +179,10 @@ Public Class Register
 
             If Check = False And CheckPic = False Then
                 'Split SQL Query for readability
-                Dim InputArray() As Object = {txtFirstName, txtLastName, txtMiddleInitial, BirthdatePicker, txtPhoneNum, ComboSex}
-
                 Dim query As String = "INSERT INTO Visitor([Picture],[FirstName],[LastName],[MiddleName],[Birthdate],[PhoneNumber],[Sex]) "
                 Dim values As String = "VALUES(@Picture,@value0,@value1,@value2,@value3,@value4,@value5);"
+                Dim InputArray() As Object = {txtFirstName, txtLastName, txtMiddleInitial, BirthdatePicker, txtPhoneNum, ComboSex}
+
                 modifyrecord(query & values, " Visitor record saved", InputArray)
 
                 MsgBoxSetYesOrNo()
@@ -228,7 +200,6 @@ Public Class Register
             ElseIf CheckPic = True Then
                 MsgBoxSetMsg(" Please take a picture")
             End If
-
         Catch
             MsgBox("Error detected, Please call administrator", MsgBoxStyle.Critical)
         End Try

@@ -65,8 +65,8 @@ Public Class MasterListDialog
         End If
     End Sub
     'Only Letters and Numbers
-    Private Sub ValidationLetterAndNumbers_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) _
-                              Handles txtAddress.KeyPress
+    Private Sub ValidationLetterAndNumbers_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
+
         If Not (Asc(e.KeyChar) = 8) Or Asc(e.KeyChar) <> 8 Then
             Dim allowedChars As String = "abcdefghijklmnopqrstuvwxyz1234567890 "
             If Not allowedChars.Contains(e.KeyChar.ToString.ToLower) Then

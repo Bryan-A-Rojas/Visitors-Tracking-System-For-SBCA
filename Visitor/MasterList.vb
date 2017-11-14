@@ -89,7 +89,7 @@ Public Class MasterList
     Private Sub ChangeHighlight()
         For Each lvi As ListViewItem In ListView1.Items
             '1 hour = Red
-            If lvi.SubItems(8).Text = "Active" Then
+            If lvi.SubItems(7).Text = "Active" Then
                 If Not lvi.BackColor.Equals(Color.Green) Then
                     lvi.BackColor = Color.Green
                     lvi.ForeColor = Color.White
@@ -127,11 +127,11 @@ Public Class MasterList
 
 
     Private Sub btnShowAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnShowAll.Click
-        Try
-            List("SELECT * FROM MasterList", True)
-        Catch ex As Exception
-            MsgBox("Error detected, please contact the administrator")
-        End Try
+        'Try
+        List("SELECT * FROM MasterList", True)
+        'Catch ex As Exception
+        'MsgBox("Error detected, please contact the administrator")
+        'End Try
     End Sub
 
     'Search Button

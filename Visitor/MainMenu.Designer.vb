@@ -22,26 +22,26 @@ Partial Class MainMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainMenu))
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Clock = New System.Windows.Forms.Timer(Me.components)
-        Me.txtDate = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.btnReports = New System.Windows.Forms.PictureBox
-        Me.btnMasterList = New System.Windows.Forms.PictureBox
-        Me.btnCurrent = New System.Windows.Forms.PictureBox
-        Me.btnApproval = New System.Windows.Forms.PictureBox
-        Me.btnRegister = New System.Windows.Forms.PictureBox
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox
-        Me.btnSignout = New System.Windows.Forms.PictureBox
-        Me.Label8 = New System.Windows.Forms.Label
+        Me.txtDate = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.btnReports = New System.Windows.Forms.PictureBox()
+        Me.btnMasterList = New System.Windows.Forms.PictureBox()
+        Me.btnCurrent = New System.Windows.Forms.PictureBox()
+        Me.btnApproval = New System.Windows.Forms.PictureBox()
+        Me.btnRegister = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnSignout = New System.Windows.Forms.PictureBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.btnReports, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMasterList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCurrent, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,11 +80,11 @@ Partial Class MainMenu
         'txtDate
         '
         Me.txtDate.AutoSize = True
-        Me.txtDate.Font = New System.Drawing.Font("Raleway", 15.0!)
+        Me.txtDate.Font = New System.Drawing.Font("Raleway", 12.0!)
         Me.txtDate.ForeColor = System.Drawing.Color.White
-        Me.txtDate.Location = New System.Drawing.Point(35, 615)
+        Me.txtDate.Location = New System.Drawing.Point(35, 618)
         Me.txtDate.Name = "txtDate"
-        Me.txtDate.Size = New System.Drawing.Size(114, 24)
+        Me.txtDate.Size = New System.Drawing.Size(93, 19)
         Me.txtDate.TabIndex = 46
         Me.txtDate.Text = "Date Today"
         '

@@ -2,15 +2,6 @@
 Imports System.IO
 
 Public Class Approve
-
-    'SQL Variables
-    Dim con As SqlConnection = New SqlConnection("server=DESKTOP-LJA6FPI\SQLEXPRESS;Initial Catalog=Visitor's Tracking System;Integrated Security=True")
-    Dim cmd As SqlCommand
-    Dim rdr As SqlDataReader
-
-    'Container Variable for picture
-    Dim DefaultImage As Image = My.Resources.No_Image_Icon
-
     'On Load
     Private Sub Approve_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Sets Default Image Icon
@@ -49,57 +40,6 @@ Public Class Approve
     End Sub
 
 
-    'Extract ID Methods
-
-    'Changes the value of Purpose ID
-    Function PurposeID(ByVal PurposeName As String) As Int16
-        If String.Compare(PurposeName, "Escort") = 0 Then
-            PurposeID = 1
-        ElseIf String.Compare(PurposeName, "Inquiry") = 0 Then
-            PurposeID = 2
-        ElseIf String.Compare(PurposeName, "Visit") = 0 Then
-            PurposeID = 3
-        ElseIf String.Compare(PurposeName, "Delivery/Package") = 0 Then
-            PurposeID = 4
-        ElseIf String.Compare(PurposeName, "Other") = 0 Then
-            PurposeID = 5
-        End If
-    End Function
-    'Changes the value of Description ID
-    Function DestinationID(ByVal DestinationName As String) As Int16
-        If String.Compare(DestinationName, "St. Maur") = 0 Then
-            DestinationID = 1
-        ElseIf String.Compare(DestinationName, "St. Benedict Hall") = 0 Then
-            DestinationID = 2
-        ElseIf String.Compare(DestinationName, "CAS Building") = 0 Then
-            DestinationID = 3
-        ElseIf String.Compare(DestinationName, "Gym") = 0 Then
-            DestinationID = 4
-            'ADD MORE
-            '!!!!!!!
-        End If
-    End Function
-
-
-    'Utility Section
-
-    'Clears Text
-    Sub erasetext()
-        Dim a As Control
-        For Each a In Me.Controls
-            If TypeOf a Is TextBox Then
-                a.Text = Nothing
-            End If
-        Next
-        'Sets Default Picture
-        PictureBoxVisitorPic.Image = DefaultImage
-    End Sub
-    'Removes Extra White Spaces
-    Private Sub StripSpaces()
-        txtSearch.Text = String.Join(" ", txtSearch.Text.Split(New Char() {}, StringSplitOptions.RemoveEmptyEntries))
-    End Sub
-
-
     'SQL Section
 
     'Refreshes the ListView
@@ -127,7 +67,9 @@ Public Class Approve
             MsgBoxSetMsg("No results found")
         End If
         con.Close()
-        erasetext()
+
+        EraseText(Me)
+        SetDefaultPicture(PictureBoxVisitorPic, DefaultImage)
     End Sub
     'Puts the selected row into textboxes
     Private Sub ListView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListView1.SelectedIndexChanged
@@ -166,7 +108,7 @@ Public Class Approve
     'On enter go and search as if search button was clicked
     Private Sub txtSearch_EnterKey(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtSearch.KeyDown
         If e.KeyCode = Keys.Enter Then
-            StripSpaces()
+            StripSpaces(Me)
             Try
                 If Not txtSearch.Text = "" Then
                     Dim Query As String = "SELECT [VisitorID],[FirstName],[MiddleName],[LastName],[Sex],[Picture] FROM Visitor"
@@ -205,8 +147,8 @@ Public Class Approve
 
     'Search Button
     Private Sub btnSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSearch.Click
-        StripSpaces()
         Try
+            StripSpaces(Me)
             If Not txtSearch.Text = "" Then
                 Dim Query As String = "SELECT [VisitorID],[FirstName],[MiddleName],[LastName],[Sex],[Picture] FROM Visitor"
                 Dim Condition As String = " WHERE FirstName + ' ' + LastName LIKE  '%' + @value0 + '%' AND Status = 'Active'"
@@ -218,6 +160,4 @@ Public Class Approve
             MsgBox("Error detected, please contact the administrator")
         End Try
     End Sub
-
-
 End Class

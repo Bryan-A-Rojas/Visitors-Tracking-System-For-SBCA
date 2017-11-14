@@ -23,29 +23,27 @@ Partial Class ApproveDialog
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ApproveDialog))
-        Me.Label13 = New System.Windows.Forms.Label
-        Me.Label12 = New System.Windows.Forms.Label
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.txtDestination = New System.Windows.Forms.ComboBox
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.txtPurpose = New System.Windows.Forms.ComboBox
-        Me.txtDescription = New System.Windows.Forms.TextBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.btnTimeIn = New System.Windows.Forms.Button
-        Me.btnCancel = New System.Windows.Forms.Button
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.txtStatus = New System.Windows.Forms.TextBox
-        Me.txtVisitorID = New System.Windows.Forms.Label
-        Me.txtName = New System.Windows.Forms.Label
-        Me.txtSex = New System.Windows.Forms.Label
-        Me.txtPhoneNum = New System.Windows.Forms.Label
-        Me.txtBirthDate = New System.Windows.Forms.Label
-        Me.txtAddress = New System.Windows.Forms.TextBox
-        Me.PictureBoxVisitorPic = New System.Windows.Forms.PictureBox
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtDestination = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtPurpose = New System.Windows.Forms.ComboBox()
+        Me.txtDescription = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnTimeIn = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtStatus = New System.Windows.Forms.TextBox()
+        Me.txtVisitorID = New System.Windows.Forms.Label()
+        Me.txtName = New System.Windows.Forms.Label()
+        Me.txtSex = New System.Windows.Forms.Label()
+        Me.txtPhoneNum = New System.Windows.Forms.Label()
+        Me.txtBirthDate = New System.Windows.Forms.Label()
+        Me.PictureBoxVisitorPic = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBoxVisitorPic, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -54,7 +52,7 @@ Partial Class ApproveDialog
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Raleway", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(357, 130)
+        Me.Label13.Location = New System.Drawing.Point(357, 140)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(155, 24)
         Me.Label13.TabIndex = 55
@@ -65,29 +63,18 @@ Partial Class ApproveDialog
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Raleway", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(357, 94)
+        Me.Label12.Location = New System.Drawing.Point(357, 104)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(48, 24)
         Me.Label12.TabIndex = 54
         Me.Label12.Text = "Sex:"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Raleway", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(357, 166)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(90, 24)
-        Me.Label11.TabIndex = 51
-        Me.Label11.Text = "Address:"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Raleway", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(357, 22)
+        Me.Label8.Location = New System.Drawing.Point(357, 32)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(96, 24)
         Me.Label8.TabIndex = 46
@@ -98,7 +85,7 @@ Partial Class ApproveDialog
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Raleway", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(357, 58)
+        Me.Label7.Location = New System.Drawing.Point(357, 68)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(70, 24)
         Me.Label7.TabIndex = 43
@@ -199,7 +186,7 @@ Partial Class ApproveDialog
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Raleway", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(357, 202)
+        Me.Label1.Location = New System.Drawing.Point(357, 184)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(106, 24)
         Me.Label1.TabIndex = 65
@@ -210,7 +197,7 @@ Partial Class ApproveDialog
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Raleway", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(357, 238)
+        Me.Label2.Location = New System.Drawing.Point(357, 220)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(73, 24)
         Me.Label2.TabIndex = 66
@@ -220,7 +207,7 @@ Partial Class ApproveDialog
         '
         Me.txtStatus.Font = New System.Drawing.Font("Raleway", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtStatus.ForeColor = System.Drawing.Color.Black
-        Me.txtStatus.Location = New System.Drawing.Point(523, 235)
+        Me.txtStatus.Location = New System.Drawing.Point(523, 217)
         Me.txtStatus.Name = "txtStatus"
         Me.txtStatus.ReadOnly = True
         Me.txtStatus.Size = New System.Drawing.Size(114, 31)
@@ -231,7 +218,7 @@ Partial Class ApproveDialog
         Me.txtVisitorID.AutoSize = True
         Me.txtVisitorID.Font = New System.Drawing.Font("Raleway", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtVisitorID.ForeColor = System.Drawing.Color.White
-        Me.txtVisitorID.Location = New System.Drawing.Point(519, 22)
+        Me.txtVisitorID.Location = New System.Drawing.Point(519, 32)
         Me.txtVisitorID.Name = "txtVisitorID"
         Me.txtVisitorID.Size = New System.Drawing.Size(0, 24)
         Me.txtVisitorID.TabIndex = 69
@@ -241,7 +228,7 @@ Partial Class ApproveDialog
         Me.txtName.AutoSize = True
         Me.txtName.Font = New System.Drawing.Font("Raleway", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtName.ForeColor = System.Drawing.Color.White
-        Me.txtName.Location = New System.Drawing.Point(519, 58)
+        Me.txtName.Location = New System.Drawing.Point(519, 68)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(0, 24)
         Me.txtName.TabIndex = 70
@@ -251,7 +238,7 @@ Partial Class ApproveDialog
         Me.txtSex.AutoSize = True
         Me.txtSex.Font = New System.Drawing.Font("Raleway", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSex.ForeColor = System.Drawing.Color.White
-        Me.txtSex.Location = New System.Drawing.Point(519, 94)
+        Me.txtSex.Location = New System.Drawing.Point(519, 104)
         Me.txtSex.Name = "txtSex"
         Me.txtSex.Size = New System.Drawing.Size(0, 24)
         Me.txtSex.TabIndex = 71
@@ -261,7 +248,7 @@ Partial Class ApproveDialog
         Me.txtPhoneNum.AutoSize = True
         Me.txtPhoneNum.Font = New System.Drawing.Font("Raleway", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPhoneNum.ForeColor = System.Drawing.Color.White
-        Me.txtPhoneNum.Location = New System.Drawing.Point(519, 130)
+        Me.txtPhoneNum.Location = New System.Drawing.Point(519, 140)
         Me.txtPhoneNum.Name = "txtPhoneNum"
         Me.txtPhoneNum.Size = New System.Drawing.Size(0, 24)
         Me.txtPhoneNum.TabIndex = 72
@@ -271,20 +258,10 @@ Partial Class ApproveDialog
         Me.txtBirthDate.AutoSize = True
         Me.txtBirthDate.Font = New System.Drawing.Font("Raleway", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBirthDate.ForeColor = System.Drawing.Color.White
-        Me.txtBirthDate.Location = New System.Drawing.Point(519, 202)
+        Me.txtBirthDate.Location = New System.Drawing.Point(519, 184)
         Me.txtBirthDate.Name = "txtBirthDate"
         Me.txtBirthDate.Size = New System.Drawing.Size(0, 24)
         Me.txtBirthDate.TabIndex = 74
-        '
-        'txtAddress
-        '
-        Me.txtAddress.Font = New System.Drawing.Font("Raleway", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddress.ForeColor = System.Drawing.Color.Black
-        Me.txtAddress.Location = New System.Drawing.Point(523, 163)
-        Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.ReadOnly = True
-        Me.txtAddress.Size = New System.Drawing.Size(241, 31)
-        Me.txtAddress.TabIndex = 75
         '
         'PictureBoxVisitorPic
         '
@@ -303,7 +280,6 @@ Partial Class ApproveDialog
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(159, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 582)
-        Me.Controls.Add(Me.txtAddress)
         Me.Controls.Add(Me.txtBirthDate)
         Me.Controls.Add(Me.txtPhoneNum)
         Me.Controls.Add(Me.txtSex)
@@ -322,7 +298,6 @@ Partial Class ApproveDialog
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.PictureBoxVisitorPic)
@@ -337,7 +312,6 @@ Partial Class ApproveDialog
     End Sub
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents PictureBoxVisitorPic As System.Windows.Forms.PictureBox
@@ -357,5 +331,4 @@ Partial Class ApproveDialog
     Friend WithEvents txtSex As System.Windows.Forms.Label
     Friend WithEvents txtPhoneNum As System.Windows.Forms.Label
     Friend WithEvents txtBirthDate As System.Windows.Forms.Label
-    Friend WithEvents txtAddress As System.Windows.Forms.TextBox
 End Class

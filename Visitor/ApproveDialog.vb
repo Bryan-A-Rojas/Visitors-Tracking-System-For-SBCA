@@ -63,6 +63,12 @@ Public Class ApproveDialog
         txtName.Text = rdr("FirstName") & " " & rdr("MiddleName") & " " & rdr("LastName")
         txtSex.Text = rdr("Sex")
         txtPhoneNum.Text = rdr("PhoneNumber")
+
+        'Set Phone Number as N/A if empty
+        If txtPhoneNum.Text = "" Then
+            txtPhoneNum.Text = "N/A"
+        End If
+
         txtBirthDate.Text = Format(rdr("Birthdate"), "MMMM dd,yyyy")
         txtStatus.Text = rdr("Status")
 

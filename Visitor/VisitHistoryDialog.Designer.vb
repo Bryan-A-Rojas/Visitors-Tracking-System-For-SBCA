@@ -23,49 +23,37 @@ Partial Class VisitHistoryDialog
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VisitHistoryDialog))
-        Me.txtAddress = New System.Windows.Forms.TextBox
-        Me.txtBirthDate = New System.Windows.Forms.Label
-        Me.txtPhoneNum = New System.Windows.Forms.Label
-        Me.txtSex = New System.Windows.Forms.Label
-        Me.txtName = New System.Windows.Forms.Label
-        Me.txtVisitorID = New System.Windows.Forms.Label
-        Me.txtStatus = New System.Windows.Forms.TextBox
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label13 = New System.Windows.Forms.Label
-        Me.Label12 = New System.Windows.Forms.Label
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.PictureBoxVisitorPic = New System.Windows.Forms.PictureBox
-        Me.ListView1 = New System.Windows.Forms.ListView
-        Me.ID = New System.Windows.Forms.ColumnHeader
-        Me.Purpose = New System.Windows.Forms.ColumnHeader
-        Me.Destination = New System.Windows.Forms.ColumnHeader
-        Me.Description = New System.Windows.Forms.ColumnHeader
-        Me.TimeIn = New System.Windows.Forms.ColumnHeader
-        Me.TimeOut = New System.Windows.Forms.ColumnHeader
-        Me.btnBack = New System.Windows.Forms.PictureBox
+        Me.txtBirthDate = New System.Windows.Forms.Label()
+        Me.txtPhoneNum = New System.Windows.Forms.Label()
+        Me.txtSex = New System.Windows.Forms.Label()
+        Me.txtName = New System.Windows.Forms.Label()
+        Me.txtVisitorID = New System.Windows.Forms.Label()
+        Me.txtStatus = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.PictureBoxVisitorPic = New System.Windows.Forms.PictureBox()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Purpose = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Destination = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Description = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.TimeIn = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.TimeOut = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.btnBack = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBoxVisitorPic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'txtAddress
-        '
-        Me.txtAddress.Font = New System.Drawing.Font("Raleway", 10.0!)
-        Me.txtAddress.ForeColor = System.Drawing.Color.Black
-        Me.txtAddress.Location = New System.Drawing.Point(386, 136)
-        Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.ReadOnly = True
-        Me.txtAddress.Size = New System.Drawing.Size(241, 23)
-        Me.txtAddress.TabIndex = 90
         '
         'txtBirthDate
         '
         Me.txtBirthDate.AutoSize = True
         Me.txtBirthDate.Font = New System.Drawing.Font("Raleway", 10.0!)
         Me.txtBirthDate.ForeColor = System.Drawing.Color.White
-        Me.txtBirthDate.Location = New System.Drawing.Point(383, 174)
+        Me.txtBirthDate.Location = New System.Drawing.Point(383, 161)
         Me.txtBirthDate.Name = "txtBirthDate"
         Me.txtBirthDate.Size = New System.Drawing.Size(0, 16)
         Me.txtBirthDate.TabIndex = 89
@@ -75,7 +63,7 @@ Partial Class VisitHistoryDialog
         Me.txtPhoneNum.AutoSize = True
         Me.txtPhoneNum.Font = New System.Drawing.Font("Raleway", 10.0!)
         Me.txtPhoneNum.ForeColor = System.Drawing.Color.White
-        Me.txtPhoneNum.Location = New System.Drawing.Point(383, 110)
+        Me.txtPhoneNum.Location = New System.Drawing.Point(383, 122)
         Me.txtPhoneNum.Name = "txtPhoneNum"
         Me.txtPhoneNum.Size = New System.Drawing.Size(0, 16)
         Me.txtPhoneNum.TabIndex = 88
@@ -85,7 +73,7 @@ Partial Class VisitHistoryDialog
         Me.txtSex.AutoSize = True
         Me.txtSex.Font = New System.Drawing.Font("Raleway", 10.0!)
         Me.txtSex.ForeColor = System.Drawing.Color.White
-        Me.txtSex.Location = New System.Drawing.Point(383, 82)
+        Me.txtSex.Location = New System.Drawing.Point(383, 94)
         Me.txtSex.Name = "txtSex"
         Me.txtSex.Size = New System.Drawing.Size(0, 16)
         Me.txtSex.TabIndex = 87
@@ -95,7 +83,7 @@ Partial Class VisitHistoryDialog
         Me.txtName.AutoSize = True
         Me.txtName.Font = New System.Drawing.Font("Raleway", 10.0!)
         Me.txtName.ForeColor = System.Drawing.Color.White
-        Me.txtName.Location = New System.Drawing.Point(383, 54)
+        Me.txtName.Location = New System.Drawing.Point(383, 66)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(0, 16)
         Me.txtName.TabIndex = 86
@@ -105,7 +93,7 @@ Partial Class VisitHistoryDialog
         Me.txtVisitorID.AutoSize = True
         Me.txtVisitorID.Font = New System.Drawing.Font("Raleway", 10.0!)
         Me.txtVisitorID.ForeColor = System.Drawing.Color.White
-        Me.txtVisitorID.Location = New System.Drawing.Point(383, 27)
+        Me.txtVisitorID.Location = New System.Drawing.Point(383, 39)
         Me.txtVisitorID.Name = "txtVisitorID"
         Me.txtVisitorID.Size = New System.Drawing.Size(0, 16)
         Me.txtVisitorID.TabIndex = 85
@@ -114,7 +102,7 @@ Partial Class VisitHistoryDialog
         '
         Me.txtStatus.Font = New System.Drawing.Font("Raleway", 10.0!)
         Me.txtStatus.ForeColor = System.Drawing.Color.Black
-        Me.txtStatus.Location = New System.Drawing.Point(386, 205)
+        Me.txtStatus.Location = New System.Drawing.Point(386, 192)
         Me.txtStatus.Name = "txtStatus"
         Me.txtStatus.ReadOnly = True
         Me.txtStatus.Size = New System.Drawing.Size(114, 23)
@@ -125,7 +113,7 @@ Partial Class VisitHistoryDialog
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Raleway", 10.0!)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(262, 208)
+        Me.Label2.Location = New System.Drawing.Point(262, 195)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 16)
         Me.Label2.TabIndex = 83
@@ -136,7 +124,7 @@ Partial Class VisitHistoryDialog
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Raleway", 10.0!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(262, 174)
+        Me.Label1.Location = New System.Drawing.Point(262, 161)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(76, 16)
         Me.Label1.TabIndex = 82
@@ -147,7 +135,7 @@ Partial Class VisitHistoryDialog
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Raleway", 10.0!)
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(260, 110)
+        Me.Label13.Location = New System.Drawing.Point(260, 122)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(110, 16)
         Me.Label13.TabIndex = 81
@@ -158,29 +146,18 @@ Partial Class VisitHistoryDialog
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Raleway", 10.0!)
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(260, 82)
+        Me.Label12.Location = New System.Drawing.Point(260, 94)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(35, 16)
         Me.Label12.TabIndex = 80
         Me.Label12.Text = "Sex:"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Raleway", 10.0!)
-        Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(260, 139)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(65, 16)
-        Me.Label11.TabIndex = 79
-        Me.Label11.Text = "Address:"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Raleway", 10.0!)
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(260, 27)
+        Me.Label8.Location = New System.Drawing.Point(260, 39)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(69, 16)
         Me.Label8.TabIndex = 78
@@ -191,7 +168,7 @@ Partial Class VisitHistoryDialog
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Raleway", 10.0!)
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(260, 54)
+        Me.Label7.Location = New System.Drawing.Point(260, 66)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(51, 16)
         Me.Label7.TabIndex = 77
@@ -271,7 +248,6 @@ Partial Class VisitHistoryDialog
         Me.ClientSize = New System.Drawing.Size(800, 582)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.txtAddress)
         Me.Controls.Add(Me.txtBirthDate)
         Me.Controls.Add(Me.txtPhoneNum)
         Me.Controls.Add(Me.txtSex)
@@ -282,7 +258,6 @@ Partial Class VisitHistoryDialog
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.PictureBoxVisitorPic)
@@ -296,7 +271,6 @@ Partial Class VisitHistoryDialog
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents txtAddress As System.Windows.Forms.TextBox
     Friend WithEvents txtBirthDate As System.Windows.Forms.Label
     Friend WithEvents txtPhoneNum As System.Windows.Forms.Label
     Friend WithEvents txtSex As System.Windows.Forms.Label
@@ -307,7 +281,6 @@ Partial Class VisitHistoryDialog
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents PictureBoxVisitorPic As System.Windows.Forms.PictureBox

@@ -22,20 +22,20 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.txtDate = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtDate = New System.Windows.Forms.Label()
         Me.Clock = New System.Windows.Forms.Timer(Me.components)
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.txtUsername = New System.Windows.Forms.TextBox
-        Me.txtPassword = New System.Windows.Forms.TextBox
-        Me.btnLogin = New System.Windows.Forms.Button
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox
-        Me.btnExit = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.btnLogin = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnExit = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -65,11 +65,11 @@ Partial Class Login
         'txtDate
         '
         Me.txtDate.AutoSize = True
-        Me.txtDate.Font = New System.Drawing.Font("Raleway", 15.0!)
+        Me.txtDate.Font = New System.Drawing.Font("Raleway", 12.0!)
         Me.txtDate.ForeColor = System.Drawing.Color.White
-        Me.txtDate.Location = New System.Drawing.Point(33, 361)
+        Me.txtDate.Location = New System.Drawing.Point(33, 363)
         Me.txtDate.Name = "txtDate"
-        Me.txtDate.Size = New System.Drawing.Size(114, 24)
+        Me.txtDate.Size = New System.Drawing.Size(93, 19)
         Me.txtDate.TabIndex = 48
         Me.txtDate.Text = "Date Today"
         '

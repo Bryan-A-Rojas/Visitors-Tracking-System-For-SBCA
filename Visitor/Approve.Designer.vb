@@ -22,33 +22,33 @@ Partial Class Approve
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Approve))
-        Me.txtSearch = New System.Windows.Forms.TextBox
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.ListView1 = New System.Windows.Forms.ListView
-        Me.ID = New System.Windows.Forms.ColumnHeader
-        Me.Firstname = New System.Windows.Forms.ColumnHeader
-        Me.MI = New System.Windows.Forms.ColumnHeader
-        Me.Lastname = New System.Windows.Forms.ColumnHeader
-        Me.Sex = New System.Windows.Forms.ColumnHeader
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Firstname = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.MI = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Lastname = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Sex = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Clock = New System.Windows.Forms.Timer(Me.components)
-        Me.btnViewInfo = New System.Windows.Forms.Button
-        Me.txtDate = New System.Windows.Forms.Label
-        Me.btnSearch = New System.Windows.Forms.PictureBox
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox
-        Me.btnBack = New System.Windows.Forms.PictureBox
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox
-        Me.PictureBoxVisitorPic = New System.Windows.Forms.PictureBox
-        Me.txtVisitorID = New System.Windows.Forms.Label
-        Me.txtName = New System.Windows.Forms.Label
-        Me.txtSex = New System.Windows.Forms.Label
+        Me.btnViewInfo = New System.Windows.Forms.Button()
+        Me.txtDate = New System.Windows.Forms.Label()
+        Me.btnSearch = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.btnBack = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxVisitorPic = New System.Windows.Forms.PictureBox()
+        Me.txtVisitorID = New System.Windows.Forms.Label()
+        Me.txtName = New System.Windows.Forms.Label()
+        Me.txtSex = New System.Windows.Forms.Label()
         CType(Me.btnSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()

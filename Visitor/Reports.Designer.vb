@@ -22,19 +22,19 @@ Partial Class Reports
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Reports))
-        Me.btnDay = New System.Windows.Forms.Button
-        Me.btnMonth = New System.Windows.Forms.Button
-        Me.btnYear = New System.Windows.Forms.Button
+        Me.btnDay = New System.Windows.Forms.Button()
+        Me.btnMonth = New System.Windows.Forms.Button()
+        Me.btnYear = New System.Windows.Forms.Button()
         Me.Clock = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox
-        Me.txtDate = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox
-        Me.btnBack = New System.Windows.Forms.PictureBox
-        Me.btnAlltime = New System.Windows.Forms.Button
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.txtDate = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnBack = New System.Windows.Forms.PictureBox()
+        Me.btnAlltime = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,11 +89,11 @@ Partial Class Reports
         'txtDate
         '
         Me.txtDate.AutoSize = True
-        Me.txtDate.Font = New System.Drawing.Font("Raleway", 15.0!)
+        Me.txtDate.Font = New System.Drawing.Font("Raleway", 12.0!)
         Me.txtDate.ForeColor = System.Drawing.Color.White
-        Me.txtDate.Location = New System.Drawing.Point(38, 567)
+        Me.txtDate.Location = New System.Drawing.Point(38, 569)
         Me.txtDate.Name = "txtDate"
-        Me.txtDate.Size = New System.Drawing.Size(114, 24)
+        Me.txtDate.Size = New System.Drawing.Size(93, 19)
         Me.txtDate.TabIndex = 62
         Me.txtDate.Text = "Date Today"
         '
